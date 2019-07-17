@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Clean and Concise Home Page</title>
+    <link rel="stylesheet" href="articles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="header">
+      <blockquote class="blockquote text-center">
+      <h1>Clean and Concise</h1>
+      <h2>News Aggregator</h2>
+      </blockquote>
+    </div>
+    <div class="body" style="margin: 10px">
+      <div class="content">
+        <nav>
+          <div class="nav nav-tabs" id="nav-Tab" role="tablist">
+              <a class="nav-item nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+              <a class="nav-item nav-link" id="recent-tab" data-toggle="tab" href="#Recent" role="tab" aria-controls="recent" aria-selected="false">Recent</a>
+              <a class="nav-item nav-link" id="USNews-tab" data-toggle="tab" href="#USNews" role="tab" aria-controls="USNews" aria-selected="false">U.S. News</a>
+              <a class="nav-item nav-link" id="CNN-tab" data-toggle="tab" href="#CNN" role="tab" aria-controls="CNN" aria-selected="false">CNN</a>
+              <a class="nav-item nav-link" id="NBC-tab" data-toggle="tab" href="#NBC" role="tab" aria-controls="NBC" aria-selected="false">NBC</a>
+              <a class="nav-item nav-link" id="archive-tab" data-toggle="tab" href="#archive" role="tab" aria-controls="archive" aria-selected="false">archive</a>
+          </div>
+        </nav>
+        <div class="tab-content" id="nav-TabContent">
+          <div class="tab-pane fade show active" id="Home" role="tabpanel" aria-labelledby="Home-tab"></div>
+          <div class="tab-pane fade" id="Recent" role="tabpanel" aria-labelledby="Recent-tab"></div>
+          <div class="tab-pane fade" id="USNews" role="tabpanel" aria-labelledby="USNews-tab"></div>
+          <div class="tab-pane fade" id="CNN" role="tabpanel" aria-labelledby="CNN-tab"></div>
+          <div class="tab-pane fade" id="NBC" role="tabpanel" aria-labelledby="NBC-tab"></div>
+          <div class="tab-pane fade" id="archive" role="tabpanel" aria-labelledby="archive-tab"></div>
+    </div>
+    <br>
+
+      <div class="Articles">
+        <ul class="list-unstyled">
+          <li>
+          <div class="card mb-3" style="max-width: 540px;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img src="" class="card-img" alt="">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+          <li>
+          <div class="card mb-3" style="max-width: 540px;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img src="" class="card-img" alt="">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+            <li>
+              <div class="card mb-3" style="max-width: 540px;">
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img src="" class="card-img" alt="">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+        </ul>
+      </div>
+
+      <div id="like_button_container"></div>
+
+       <!-- Load React. -->
+       <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+       <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+       <!-- Load our React component. -->
+       <script src="like_button.js"></script>
+       <script src="app.js"></script>
+       <script src="index.js"></script>
+       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      </div>
+    <div class="footer">
+
+    </div>
+  </body>
+</html>
