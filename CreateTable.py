@@ -10,22 +10,13 @@ table = dynamodb.create_table(
         {
             'AttributeName': 'Headline',
             'KeyType': 'HASH'  #Partition key
-        },
-        {
-            'AttributeName': 'img',
-            'KeyType': 'RANGE'  #Sort key
         }
     ],
     AttributeDefinitions=[
         {
             'AttributeName': 'Headline',
-            'AttributeType': 'N'
-        },
-        {
-            'AttributeName': 'img',
             'AttributeType': 'S'
-        },
-
+        }
     ],
     ProvisionedThroughput={
         'ReadCapacityUnits': 10,
