@@ -22,7 +22,7 @@ pushit: pushes the data to a specific file as a txt
 
 Using schedule to run every hour;
 
-""" 
+"""
 import os
 import time
 import schedule
@@ -42,7 +42,8 @@ def main():
         exit()
 
     source = recv(web)
-    the_data = getit(source.find_all('a'))
+    the_data = getit(source.find_all('div',{'class':'media'}))
+    print('\n')
     print('Website Scrapped Information Obtained.'+'\n'+'Pushing information...')
     pushit(the_data)
     print('\n\n\nWaiting an hour till next info grab.')
@@ -50,29 +51,28 @@ def main():
     
         
 def recv(call):
-    src = call.content
-    soup = BeautifulSoup(src,'html.parser')
+    soup = BeautifulSoup(call.content,'html.parser')
     return soup
 
-def getit(call):
+def getit(zeta):
     the_data = []
-    for i in call:   
-        if i.img != None:
-            if i.img.get('alt') != None:
-                hold = [i.img.get('alt'),i.get('get'),i.img.get('data-src-large')]
-                the_data.append(hold)
+    for i in zeta:
+        print(i)
+        print('\n')
+        if i.img.get('alt') != "":
+            hold = [i.img.get('alt'),i.a.get('href'),i.img.get('data-src-large')]
+            the_data.append(hold)
     return the_data
 
 def pushit(call):
     #path = easygui.fileopenbox()
-    out_file = 'C:\\Users\\prest\\Desktop\\CNN\\Data.txt'
+    out_file = 'Data.txt'
     file = open(out_file,'w')
     simplejson.dump(call,file)
     file.close()
     
-#main()
-schedule.every().hour.do(main)
-while True:
-    schedule.run_pending()
-    time.sleep(1)
-
+main()
+##schedule.every().hour.do(main)
+##while True:
+##    schedule.run_pending()
+##    time.sleep(1)
